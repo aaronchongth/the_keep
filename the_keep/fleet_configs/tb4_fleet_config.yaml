@@ -43,7 +43,7 @@ rmf_fleet:
           map_url: "/home/ubuntu/the_keep/the_keep_maps/the_keep.yaml"
       # initial_pose: [-1.6000019311904907, -0.5031192898750305, 0]
 
-  robot_state_update_frequency: 2.0 # Hz
+  robot_state_update_frequency: 10.0 # Hz
 
 
 # TRANSFORM CONFIG =============================================================
