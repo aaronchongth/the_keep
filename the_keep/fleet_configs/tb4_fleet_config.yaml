@@ -33,7 +33,7 @@ rmf_fleet:
   finishing_request: "nothing" # [park, charge, nothing]
   responsive_wait: True # Should responsive wait be on/off for the whole fleet by default? False if not specified.
   robots:
-    turtlebot3_1:
+    tb4:
       charger: "tb4_charger"
       responsive_wait: False # Should responsive wait be on/off for this specific robot? Overrides the fleet-wide setting.
       # For Nav2RobotAdapter
@@ -43,7 +43,7 @@ rmf_fleet:
           map_url: "/home/ubuntu/the_keep/the_keep_maps/the_keep.yaml"
       # initial_pose: [-1.6000019311904907, -0.5031192898750305, 0]
 
-  robot_state_update_frequency: 10.0 # Hz
+  robot_state_update_frequency: 2.0 # Hz
 
 
 # TRANSFORM CONFIG =============================================================
@@ -52,10 +52,10 @@ rmf_fleet:
 # Optional
 reference_coordinates:
   L1:
-    rmf: [[5.5941, -6.1074],
-          [5.7481, -7.3904],
-          [1.4370, -3.0793],
-          [11.0343, -1.5910]]
+    rmf: [[5.4132, -5.9098],
+          [5.5622, -7.1514],
+          [1.3905, -2.9797],
+          [10.6774, -1.5395]]
     robot: [[0.50297, 0.87751],
             [0.66281, -0.36336],
             [-3.5432, 3.83018],

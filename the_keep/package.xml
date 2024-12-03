@@ -9,9 +9,9 @@
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <exec_depend>free_fleet</exec_depend>
   <exec_depend>free_fleet_adapter</exec_depend>
   <exec_depend>rmf_demos</exec_depend>
+  <exec_depend>the_keep_maps</exec_depend>
 
   <export>
     <build_type>ament_cmake</build_type>
