@@ -1,8 +1,10 @@
 from lerobot.cameras.configs import ColorMode, Cv2Rotation
 from lerobot.cameras.realsense.configuration_realsense import RealSenseCameraConfig
 from lerobot.cameras.realsense.camera_realsense import RealSenseCamera
-from lerobot.teleoperators.so101_leader import SO101LeaderConfig, SO101Leader
 from lerobot.robots.so101_follower import SO101FollowerConfig, SO101Follower
+from lerobot.teleoperators.so101_leader import SO101LeaderConfig, SO101Leader
+from lerobot.utils.visualization_utils import _init_rerun, log_rerun_data
+
 
 camera_config = {
     "right": RealSenseCameraConfig(
@@ -33,6 +35,8 @@ robot.connect()
 teleop_device.connect()
 
 while True:
+    _init_rerun(session_name="teleoperation_with_realsense")
     observation = robot.get_observation()
     action = teleop_device.get_action()
+    log_rerun_data(observation, action)
     robot.send_action(action)
